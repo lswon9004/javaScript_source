@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+	let str = "JavaScript";
+	
+	document.write(str.slice(0, 4)+"<br>");
+	document.write(str.substr(4)+"<br>");
+
+	//slice 음수 인덱스 가능
+	document.write(str.slice(-4,-1)+"<br>");
+	//substring 음수 인덱스 불가능(0으로 처리)
+	document.write(str.substring(-4, 2)+"<br>");
+
+	//str.substring(start [, end])
+	document.write(str.substring(6,2)+"<br>");
+	document.write(str.slice(6, 2)+"<br>");//빈 문자열
+
+	//substr(start, length) start부터 length개 반환
+	document.write(str.substr(2,4)+"<br>");
+	document.write(str.substr(-6,6)+"<br>");
+</script>
+</body>
+</html>

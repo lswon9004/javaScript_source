@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let user = {name : '김자바',age:20};
+        document.write(typeof user);
+        document.write('<br>');
+        console.log(user);
+        document.write(user);
+        document.write('<br>');
+
+        document.write('프로퍼티 읽기 <br>');
+        document.write(user['age']+'<br>');
+        document.write(user.name+'<br>');
+        let n = "name";
+        document.write(user[n]+'<br>');
+        //document.write(user.n+'<br>'); error
+        document.write('<br>');
+        document.write('프로퍼티 갱신 <br>');
+
+        user.age = 33;
+        document.write(user['age']+'<br>');
+        document.write('<br>');
+
+        document.write('프로퍼티 추가 <br>');
+        user.job = "progrmmer";
+        document.write(user.job);
+        console.log(user);
+        document.write('<br>');
+        document.write('<br>');
+        //객체에 저장된 모든 프로퍼티의 이름을 한번씩 가져옴
+        let s;
+        for(s in user){
+            document.write(s+' '+typeof s+'<br>');
+            document.write(user[s]+'<br>');
+            document.write('<br>');
+        }
+
+
+        document.write('프로퍼티 삭제 <br>');
+        delete user.job;
+        console.log(user);
+        document.write(user.job);
+        document.write('<br>');
+
+        let obj ={a: 1, b : 'str', c : true, d : function(){}, e:{x:1,y:0}, f:[1, 2, 3, 4]};
+        document.write(obj.e.x);
+        document.write('<br>');
+        document.write(obj.f[0]);
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //let 함수명 = (arg1, arg2...) => {수행문;}
+        let func1 = a => a + 2;
+        let func2 = (a, b) => a + b;
+        let func3 = (a, b) => {
+            if (a > b) return a;
+            else return b;
+        }
+        document.write(func1(3)+'<br>');
+        document.write(func2(4,5)+'<br>');
+        document.write(func3(3,6)+'<br>');
+    </script>
+</body>
+
+</html>

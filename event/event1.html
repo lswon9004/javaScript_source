@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    이벤트 처리1 : html 속성
+    <input type="button" value="click" onclick="alert('클릭 이벤트 1')">
+    <br>
+    이벤트 처리2 : DOM 프로퍼티
+    <input id="elem" type="button" value="클릭2">
+    <script>
+        elem.onclick = function () { alert('클릭 이벤트 2') }
+    </script>
+    <br>
+    이벤트 처리3 : addEventListener
+    <input id="elem2" type="button" value="클릭3">
+    <input id="elem3" type="button" value="클릭4">
+
+    <script>
+        function handler() {
+            alert('클릭 이벤트 4');
+        }
+        //element.addEventListener(event, handler, [options]);
+        elem2.addEventListener("click", () => alert("클릭 이벤트 3"));
+        elem3.addEventListener("click", handler);
+        // elem3.removeEventListener("click", handler);
+    </script>
+    <br>
+    이벤트 객체 : 
+    <input type="button" value="클릭해 주세요." id="elem4">
+
+    <script>
+      elem4.onclick = function(event) {
+        // 이벤트 타입과 요소, 클릭 이벤트가 발생한 좌표를 보여줌
+        alert(event.type + " 이벤트가 " + event.currentTarget.value + "에서 발생했습니다.");
+        alert("이벤트가 발생한 곳의 좌표는 " + event.clientX + ":" + event.clientY +"입니다.");
+      };
+    </script>
+
+
+</body>
+
+</html>

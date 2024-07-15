@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>casting</title>
+</head>
+<body>
+    이름(필수항목) : <input name="name" id="name" placeholder="이름을 입력하세요">
+    <button type="button" onclick="checkName()">확인</button>
+    <p id="result"></p>
+    <script>
+        function checkName(){
+            let name =document.querySelector('#name').value;
+
+            if(name){
+                document.querySelector('#result').innerHTML = '이름을 입력했습니다.'
+            }else{
+                document.querySelector('#result').innerHTML = '이름을 입력하지 않았습니다.'
+            }
+        }
+    </script>
+</body>
+</html>

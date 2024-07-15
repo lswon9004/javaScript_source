@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let banana = {
+            name: '바나나',
+            price: 1500,
+            calcprice: function (count = 0) {
+                return count * this.price;
+            }
+        };
+        let melon = {
+            name: '멜론',
+            price: 10000,
+            calcprice: function (count = 0) {
+                return count * this.price;
+            }
+        }
+        document.write(`${banana.name} 3개 가격 : ${banana.calcprice(3)}원`)
+    </script>
+</body>
+
+</html>

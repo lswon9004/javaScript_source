@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>글자수 제한</title>
+
+</head>
+
+<body>
+	<div>
+		<textarea name="comment" rows="20" cols="50" id="comment">댓글 쓰는 영역</textarea>
+	</div>
+	<div>
+		<span id="txtLenDP">0</span> / 300자
+	</div>
+	<script type="text/javascript">
+		//key up 이벤트가 발생할 때마다 실행	
+		comment.addEventListener("keyup",txtAMaxlength)
+		function txtAMaxlength() {
+			//textarea의 글자 수를 300으로 제한
+			//넘치는 순간 alert창으로 '글자수는 300자 제한입니다.'메세지 출력
+			if(comment.value.length >300){
+				alert("글자수는 300자 제한 입니다.")
+				comment.value = comment.value.slice(0,300);
+			}
+			txtLenDP.innerHTML = comment.value.length
+		}
+	</script>
+</body>
+
+</html>

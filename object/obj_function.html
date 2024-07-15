@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Car(model) {
+            this.model = model;
+            this.speed = 0;
+            // this.brake = () => speed -= 10;
+            // this.accel = (speed) => this.speed += speed;
+        }
+        Car.prototype.brake = function(){this.speed -= 10;}
+        Car.prototype.accel = function(speed){this.speed += speed;}
+
+        let myCar = new Car('테슬라');
+        myCar.accel(30);
+        myCar.accel(100);
+
+        document.write(`${myCar.model}가 시속 ${myCar.speed}km/h로 달리고 있습니다`)
+
+        let myBus = new Car('TAYO');
+        for (let i = 0; i < 10; i++) {
+            myBus.accel(5);
+        }
+        document.write('<br>');
+        document.write(`${myBus.model}가 시속 ${myBus.speed}km/h로 달리고 있습니다`)
+
+        console.log(myBus);
+        document.write('<br>');
+
+    </script>
+</body>
+
+</html>

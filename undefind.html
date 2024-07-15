@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num = 10;
+        document.write(typeof num+"<br>");
+
+        let x;//초기화 x
+        document.write(x + '<br>');
+        document.write(typeof x+"<br>");
+
+        x = null;
+        document.write(x + '<br>');
+        document.write(typeof x+"<br>");
+
+        let obj = [a = 1, b = 2, c = 3];//객체생성
+        document.write(obj.d + "<br>");//객체 내 없는 속성을 찾을 때
+
+        function func(y) {
+            document.write(y + "<br>")//매개변수 값 없이 호출
+        }
+        document.write(func()+"<br>");//리턴값이 없는 함수의 결과 출력
+
+        let array = [1, 2, 3];
+        document.write(array[5] + "<br>");//배열의 범위를 넘어서는 값을 출력
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form name="form1" onsubmit="return checkInput()">
+        아이디 <input name="id" id="id"><button type="button" onclick="idCheck()" onsubmit="return false">확인</button><br>
+        비밀번호 <input type="password" name="password" id="password"><br>
+        이름 <input name="name" id="name"><br>
+        주소 <input name="address" id="address" readonly><button type="button" onclick="postcode()">주소 검색</button><br>
+        상세주소 <input name="detail" id="detail"><br>
+        전화번호 <input type="tel" name="tel" id="tel"><br>
+        <button type="submit">가입</button>
+    </form>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script>
+        function postcode() {
+            new daum.Postcode({
+                oncomplete: function (data) {
+                   document.form1.address.value = data.roadAddress;
+
+                }
+            }).open();
+        }
+        check = false;
+        function checkInput() {
+            let form = document.form1;
+            if (!form.id.value) {
+                alert("id 입력하세요.");
+                return false;
+            }
+            if (!form.password.value) {
+                alert("password 입력하세요.");
+                return false;
+            }
+            if (!form.name.value) {
+                alert("이름을 입력하세요.");
+                return false;
+            }
+            if (!check) {
+                alert("id를 체크하세요");
+                return false;
+
+            }
+            return true; //생략 가능
+        }
+        function idCheck() {
+            document.form1.id.readOnly = true;
+            check = true;
+
+        }
+    </script>
+</body>
+
+</html>

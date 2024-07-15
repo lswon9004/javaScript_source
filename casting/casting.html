@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자동 형변환</title>
+</head>
+<body>
+    <script>
+        let num = 0;
+        if(num){
+            document.write("0 : true");
+        }else{
+            document.write("0 : false");
+        }
+        document.write("<br>");
+        num = NaN;
+        if(num){
+            document.write("NaN : true");
+        }else{
+            document.write("NaN : false");
+        }
+        document.write("<br>");
+        num = '';
+        if(num){
+            document.write("\'\' : true");
+        }else{
+            document.write("\'\' : false");
+        }
+        document.write("<br>");
+        num = 'String';
+        if(num){
+            document.write("String : true");
+        }else{
+            document.write("String : false");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let age = prompt("나이를 입력하세요.","정수로 입력하세요.");
+        //prompt()의 리턴은 문자열 입니다.
+        document.write(age+"살 입니다.<br>");
+        document.write(`${age}살 입니다<br>`);
+        let after = age +10;//이어쓰기
+        document.write(`10년후 ${after}살 입니다.<br>`)
+        let after1 = parseInt(age) +10;//더하기
+        document.write(`10년후 ${after1}살 입니다.<br>`)
+    </script>
+</body>
+</html>
